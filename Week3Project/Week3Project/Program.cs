@@ -13,7 +13,16 @@ namespace Week3Project
             Console.WriteLine("What's your favorite number?");
             string response3 = Console.ReadLine();
             Console.WriteLine("How many pets do you have?");
-            string response4 = Console.ReadLine();
+            string input = Console.ReadLine();
+            int num = -1;
+            if (!int.TryParse(input, out num))
+            {
+                Console.WriteLine("Not an integer");
+            }
+            else
+            {
+                ...
+            }
             Console.WriteLine("What are the names of your pets?");
             string response5 = Console.ReadLine();
 
