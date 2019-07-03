@@ -21,8 +21,8 @@ namespace Week3Project
             }
             else
             {
-                ...
-            }
+                
+           }
             Console.WriteLine("What are the names of your pets?");
             string response5 = Console.ReadLine();
 
