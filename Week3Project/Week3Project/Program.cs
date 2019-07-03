@@ -25,7 +25,7 @@ namespace Week3Project
 
 
             Console.WriteLine($"Your name is {user.firstName} {user.lastName}");
-            Console.WriteLine($"Your favorite number is {user.favoriteNumber} and You have pet {user.numberOfPets}");
+            Console.WriteLine($"Your favorite number is {user.favoriteNumber} and You have {user.numberOfPets} pet(s)");
             Console.WriteLine($"And your pet name is {user.namesOfPets}");
         }
     }
