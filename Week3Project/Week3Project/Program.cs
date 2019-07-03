@@ -2,29 +2,31 @@
 
 namespace Week3Project
 {
-    class Program
+    class Program : User
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What's your first name?");
-            string response1 = Console.ReadLine();
+            var user = new User();
 
-            Console.WriteLine("What's your last name?");
-            string response2 = Console.ReadLine();
-
-            Console.WriteLine("What's your favorite number?");
-            string response3 = Console.ReadLine();
-
-            Console.WriteLine("How many pets do you have?");
-            string response4 = Console.ReadLine();
-            
-            Console.WriteLine("What are the names of your pets?");
-            string response5 = Console.ReadLine();
+            user.firstName = user.AnswerQuestion("What's your first name?");
 
 
-            Console.WriteLine("Your first name is " + response1 + " Your last name is " + response2 
-                + " Your favorite number is\n" + response3 + " You have pet " + response4 
-                + " and your pet's name is " + response5 );
+            user.lastName = user.AnswerQuestion("What's your last name?");
+
+
+            user.favoriteNumber = user.AnswerQuestionWithInteger("What's your favorite number?");
+
+
+            user.numberOfPets = user.AnswerQuestionWithInteger("How many pets do you have?");
+
+
+            user.namesOfPets = user.AnswerQuestion("What are the names of your pets?");
+
+
+
+            Console.WriteLine($"Your name is {user.firstName} {user.lastName}");
+            Console.WriteLine($"Your favorite number is {user.favoriteNumber} and You have pet {user.numberOfPets}");
+            Console.WriteLine($"And your pet name is {user.namesOfPets}");
         }
     }
 }
